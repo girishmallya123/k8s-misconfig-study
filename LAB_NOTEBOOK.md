@@ -37,3 +37,11 @@
 - Design: ALL high-severity/rare findings (SEC_PRIVILEGED 11, RBAC_CLUSTER_ADMIN_BINDING 2, HOST_NETWORK 14, HOST_PID 7, HOST_IPC 2, SEC_DANGEROUS_CAPABILITY 7, SEC_RUN_AS_ROOT_EXPLICIT 4, RBAC_WILDCARD_{VERBS,RESOURCES} 29, SECRET_LITERAL_ENV 37, SECRET_COMMITTED sampled 40 arm-stratified) + all SEC_CAPABILITY_ADDED 30 + DEPRECATED_API 30 + IMG_{UNTAGGED,LATEST} 40 + 50-finding round-robin sample across the 10 common rules.
 - Each row: sample_id, arm, rule, severity, kind, name, container, source_file, absolute corpus_path, blank label_TP_FP_unsure, blank reviewer_notes. Verified: all 302 corpus paths resolve.
 - Labeling protocol to use: label each finding TP/FP/unsure against taxonomy v1; double-label a random 10% subset (S001..S030) with a second reviewer to report Cohen's kappa.
+
+## 2026-10-21 — AI pre-labeling of the v2 validation sample (late evening)
+- Girish approved AI pre-labeling with author verification (his labels remain ground truth).
+- Built evidence packets for all 457 rows (extract_packets.py); judged each row with a written one-line justification → results/labeling_sample_v2_prelabelled.csv (prelabel + prelabel_reason + blank your_label/your_notes).
+- Outcome: 328 TP / 122 FP / 7 unsure (draft precision ≈73%). Blind duplicate agreement 44/44 groups. Spot-checks (5 rows across rules) verified against raw YAML.
+- Taxonomy-v2 signals: SECRET_COMMITTED must require credential material (12% as defined); SEC_CAPABILITY_ADDED must exclude least-privilege patterns (24%); host-namespace rules + SEC_PRIVILEGED need the infra-agent class; SECRET_LITERAL_ENV must exclude *_FILE/_NAME references and policy settings (40%).
+- Extraction caveat found: duplicate-named ClusterRoles in Argo CD bundles (4 rows hand-verified).
+- NEXT: Girish's verification pass on the pre-labeled CSV → final per-rule precision → taxonomy v2.
