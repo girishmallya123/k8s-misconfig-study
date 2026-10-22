@@ -84,7 +84,7 @@ def image_findings(image: str):
     return out
 
 
-def container_findings(c, pod_sc, kind):
+def container_findings(c, pod_sc, kind, is_init=False):
     """c: container dict; pod_sc: pod-level securityContext."""
     out = []
     sc = c.get("securityContext") or {}
@@ -104,7 +104,8 @@ def container_findings(c, pod_sc, kind):
     elif caps_add:
         out.append("SEC_CAPABILITY_ADDED")
     seccomp = sc.get("seccompProfile", pod_sc.get("seccompProfile")) or {}
-    if not seccomp.get("type"):
+    if seccomp.get("type") in (None, "", "Unconfined"):
+        # Unconfined explicitly means NO seccomp profile is applied.
         out.append("SEC_NO_SECCOMP")
     res = c.get("resources") or {}
     limits = res.get("limits") or {}
@@ -115,8 +116,13 @@ def container_findings(c, pod_sc, kind):
         out.append("RES_NO_MEM_LIMIT")
     if not requests:
         out.append("RES_NO_REQUESTS")
-    out += image_findings(str(c.get("image", "")))
-    if kind in LONG_RUNNING:
+    image = c.get("image")
+    if isinstance(image, str) and image.strip():
+        out += image_findings(image)
+    # else: image injected at deploy time (e.g. kustomize) — unobservable in
+    # this file, so no IMG_* judgment is made (counted in stats instead).
+    if kind in LONG_RUNNING and not is_init:
+        # Init containers cannot have probes; scoring them was spurious.
         if not c.get("livenessProbe"):
             out.append("REL_NO_LIVENESS_PROBE")
         if not c.get("readinessProbe"):
@@ -128,7 +134,7 @@ def container_findings(c, pod_sc, kind):
     return out
 
 
-def pod_findings(spec):
+def pod_findings(spec, sa_index=None, doc_ns=None, template_ns=None):
     out = []
     if spec.get("hostNetwork") is True:
         out.append("HOST_NETWORK")
@@ -137,8 +143,30 @@ def pod_findings(spec):
     if spec.get("hostIPC") is True:
         out.append("HOST_IPC")
     if spec.get("automountServiceAccountToken") is not False:
-        out.append("SA_TOKEN_AUTOMOUNTED")
+        # The pod spec is silent: the ServiceAccount object's own flag decides
+        # before the Kubernetes default (true). Join against SAs defined in
+        # the same file (install-bundle style); absent both, default applies.
+        sa_name = spec.get("serviceAccountName") or spec.get("serviceAccount") or "default"
+        sa_value = None
+        if sa_index:
+            for ns in (template_ns, doc_ns, None):
+                if (ns, sa_name) in sa_index:
+                    sa_value = sa_index[(ns, sa_name)]
+                    break
+        if sa_value is not False:
+            out.append("SA_TOKEN_AUTOMOUNTED")
     return out
+
+
+def sa_index_for(docs):
+    """(namespace, name) -> automountServiceAccountToken for SAs in this file."""
+    idx = {}
+    for doc in docs:
+        if isinstance(doc, dict) and doc.get("kind") == "ServiceAccount":
+            meta = doc.get("metadata") or {}
+            idx[(meta.get("namespace"), meta.get("name", "?"))] = \
+                doc.get("automountServiceAccountToken")
+    return idx
 
 
 def analyze():
@@ -157,6 +185,8 @@ def analyze():
             except Exception:  # noqa: BLE001
                 s["files_unparseable"] += 1
                 continue
+            docs = list(docs) if not isinstance(docs, list) else docs
+            file_sa_index = sa_index_for(docs)
             for doc in docs:
                 if not isinstance(doc, dict) or not doc.get("kind"):
                     continue
@@ -201,17 +231,21 @@ def analyze():
                     s["workloads"] += 1
                     pod_sc = spec.get("securityContext") or {}
                     wl_key = f"{src}:{wkind}/{wname}"
-                    for rule in pod_findings(spec):
+                    doc_ns = (doc.get("metadata") or {}).get("namespace")
+                    for rule in pod_findings(spec, file_sa_index, doc_ns):
                         findings.append({"arm": arm, "source": src, "kind": wkind,
                                          "name": wname, "container": None, "rule": rule})
                         rule_counts[rule] += 1
                         rule_workloads[rule].add(wl_key)
-                    containers = as_list(spec.get("containers")) + as_list(spec.get("initContainers"))
-                    for c in containers:
+                    container_groups = [(c, False) for c in as_list(spec.get("containers"))]
+                    container_groups += [(c, True) for c in as_list(spec.get("initContainers"))]
+                    for c, is_init in container_groups:
                         if not isinstance(c, dict):
                             continue
                         s["containers"] += 1
-                        for rule in container_findings(c, pod_sc, wkind):
+                        if not (isinstance(c.get("image"), str) and c.get("image").strip()):
+                            s["containers_no_image"] += 1
+                        for rule in container_findings(c, pod_sc, wkind, is_init):
                             findings.append({"arm": arm, "source": src, "kind": wkind,
                                              "name": wname,
                                              "container": c.get("name", "?"),
@@ -232,10 +266,12 @@ def analyze():
         }
         print(f"[{arm}] files={s['files']} docs={s['docs']} workloads={s['workloads']} "
               f"containers={s['containers']} findings={sum(rule_counts.values())}")
-    (ROOT / "results" / "findings.jsonl").write_text(
+    import sys
+    tag = sys.argv[1] if len(sys.argv) > 1 else ""
+    (ROOT / "results" / f"findings{tag}.jsonl").write_text(
         "\n".join(json.dumps(x) for x in findings) + "\n")
-    (ROOT / "results" / "stats.json").write_text(json.dumps(stats, indent=2))
-    print(f"\nTotal findings: {len(findings)} -> results/stats.json")
+    (ROOT / "results" / f"stats{tag}.json").write_text(json.dumps(stats, indent=2))
+    print(f"\nTotal findings: {len(findings)} -> results/stats{tag}.json")
 
 
 if __name__ == "__main__":

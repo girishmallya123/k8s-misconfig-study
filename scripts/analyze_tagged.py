@@ -23,7 +23,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).parent))
 from analyze import (DEPRECATED_APIS, ROOT, as_list, container_findings,
-                     pod_findings, pod_specs)
+                     pod_findings, pod_specs, sa_index_for)
 
 FIXTURE_REPOS = {"kubescape/regolibrary"}
 FIXTURE_SEGMENTS = {"test", "tests", "testdata", "test-data", "fixtures",
@@ -81,6 +81,7 @@ def main():
             except Exception:  # noqa: BLE001
                 s["files_unparseable"] += 1
                 continue
+            file_sa_index = sa_index_for(docs)
             for doc in docs:
                 if not isinstance(doc, dict) or not doc.get("kind"):
                     continue
@@ -109,15 +110,17 @@ def main():
                     s["workloads"] += 1
                     pod_sc = spec.get("securityContext") or {}
                     wl_key = f"{src}:{wkind}/{wname}"
-                    for rule in pod_findings(spec):
+                    doc_ns = (doc.get("metadata") or {}).get("namespace")
+                    for rule in pod_findings(spec, file_sa_index, doc_ns):
                         rc[rule] += 1
                         rw[rule].add(wl_key)
-                    containers = as_list(spec.get("containers")) + as_list(spec.get("initContainers"))
-                    for c in containers:
+                    container_groups = [(c, False) for c in as_list(spec.get("containers"))]
+                    container_groups += [(c, True) for c in as_list(spec.get("initContainers"))]
+                    for c, is_init in container_groups:
                         if not isinstance(c, dict):
                             continue
                         s["containers"] += 1
-                        for rule in container_findings(c, pod_sc, wkind):
+                        for rule in container_findings(c, pod_sc, wkind, is_init):
                             rc[rule] += 1
                             rw[rule].add(wl_key)
 
@@ -139,9 +142,10 @@ def main():
         print(f"[{group}] files={s['files']} docs={s['docs']} workloads={s['workloads']} "
               f"containers={s['containers']} findings={sum(rc.values())}")
 
-    (ROOT / "results" / "stats_tagged.json").write_text(json.dumps(stats, indent=2))
+    tag = sys.argv[1] if len(sys.argv) > 1 else ""
+    (ROOT / "results" / f"stats_tagged{tag}.json").write_text(json.dumps(stats, indent=2))
     (ROOT / "results" / "file_tags.json").write_text(json.dumps(file_tags, indent=2))
-    print("\nWrote results/stats_tagged.json and results/file_tags.json")
+    print(f"\nWrote results/stats_tagged{tag}.json and results/file_tags.json")
 
 
 if __name__ == "__main__":

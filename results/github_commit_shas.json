@@ -1,0 +1,245 @@
+{
+ "note": "HEAD commit of each local clone at analysis time. The GitHub arm was collected 2026-10-21 via git clone --depth 1 with no SHA logged at collection; the clones were not modified after collection, so these SHAs identify the analyzed snapshots. Recorded 2026-10-22.",
+ "repos": {
+  "GoogleCloudPlatform/bank-of-anthos": {
+   "sha": "db35fea9fd090150e2398106aadb475576f80d94",
+   "dir": "GoogleCloudPlatform_bank-of-anthos"
+  },
+  "GoogleCloudPlatform/microservices-demo": {
+   "sha": "38e7348eb289eb5b87c0c6e8cb19ced0449dc389",
+   "dir": "GoogleCloudPlatform_microservices-demo"
+  },
+  "Karandash8/make-argocd-fly": {
+   "sha": "a63472c021c9b496e2ee7ee64586d75dc3de3747",
+   "dir": "Karandash8_make-argocd-fly"
+  },
+  "MacroPower/kat": {
+   "sha": "dddb922dcfabca18c280aea4f0b3687b63f74911",
+   "dir": "MacroPower_kat"
+  },
+  "MasayaAoyama/kubernetes-perfect-guide": {
+   "sha": "43112df32e54df98f92bf69da4dbb2f0f3e29d31",
+   "dir": "MasayaAoyama_kubernetes-perfect-guide"
+  },
+  "SuchanMadhikarmi/kubernetes-zero-to-production": {
+   "sha": "aaef2c839380b3b6a9ac52564bc1b9c84992c4ba",
+   "dir": "SuchanMadhikarmi_kubernetes-zero-to-production"
+  },
+  "WoozyMasta/kube-dump": {
+   "sha": "f1ae560a8b9da8dba1c28619f38089d40d0d2357",
+   "dir": "WoozyMasta_kube-dump"
+  },
+  "Yolean/kubernetes-kafka": {
+   "sha": "9fb70d6cbac1b8ddde34826991890ad3ba516f74",
+   "dir": "Yolean_kubernetes-kafka"
+  },
+  "alekc/terraform-provider-kubectl": {
+   "sha": "d63faa56df020fa02ee083adda2c72a0d49b2ce5",
+   "dir": "alekc_terraform-provider-kubectl"
+  },
+  "anderseknert/kube-review": {
+   "sha": "e2c1d2908e14a3cc68b0f5b985757d4edb261b87",
+   "dir": "anderseknert_kube-review"
+  },
+  "argoproj/argo-cd": {
+   "sha": "fa47a1023bafb18d0aa0339173b1becd9feeba3c",
+   "dir": "argoproj_argo-cd"
+  },
+  "argoproj/argo-rollouts": {
+   "sha": "37eae1d641c3f88b405aa02281dcf548f39b452c",
+   "dir": "argoproj_argo-rollouts"
+  },
+  "argoproj/argo-workflows": {
+   "sha": "123b0a488f6bad6099ec7a22ecb4a4ba0e5c3748",
+   "dir": "argoproj_argo-workflows"
+  },
+  "argoproj/argocd-example-apps": {
+   "sha": "8088f4c0d970abb09e250248cc97e35623447cb5",
+   "dir": "argoproj_argocd-example-apps"
+  },
+  "cloudfoundry/cf-for-k8s": {
+   "sha": "3e13d54fb71f0938e25fb81e6023f5d9d88da648",
+   "dir": "cloudfoundry_cf-for-k8s"
+  },
+  "crossplane/crossplane": {
+   "sha": "6dbabf1e17b5f5f2b9866742c0ee11ed6668f8c7",
+   "dir": "crossplane_crossplane"
+  },
+  "crumbhole/argocd-vault-replacer": {
+   "sha": "16416acdb37771c6cc0ccde3938df0363ec617ec",
+   "dir": "crumbhole_argocd-vault-replacer"
+  },
+  "ctk-hq/ctk": {
+   "sha": "2e013e26b5c3f10e059b0a7396d0da231535f8b5",
+   "dir": "ctk-hq_ctk"
+  },
+  "cuebernetes/cuebectl": {
+   "sha": "ceb5d49cbac206c97da0cf1f303c6ab917df7e7c",
+   "dir": "cuebernetes_cuebectl"
+  },
+  "dekorateio/dekorate": {
+   "sha": "738022c4d1b73a10163c8982fd4f23a5cf8356df",
+   "dir": "dekorateio_dekorate"
+  },
+  "digitalocean/doks-debug": {
+   "sha": "148b20fc978dd4e4a877f37ea1c5687ac7ae55a3",
+   "dir": "digitalocean_doks-debug"
+  },
+  "elastic/cloud-on-k8s": {
+   "sha": "e7613de1089015c2554300b1fcac4332408e3389",
+   "dir": "elastic_cloud-on-k8s"
+  },
+  "ericchiang/terraform-provider-k8s": {
+   "sha": "fb94515153589c4a2d33565de738bdd5de3ceb2b",
+   "dir": "ericchiang_terraform-provider-k8s"
+  },
+  "fluxcd/flux2": {
+   "sha": "9ee143f8deb516daf98ef329fa4b16229aa84791",
+   "dir": "fluxcd_flux2"
+  },
+  "fluxcd/flux2-kustomize-helm-example": {
+   "sha": "4f1a5b1051b469108d1bdf0ebec6c814427e3834",
+   "dir": "fluxcd_flux2-kustomize-helm-example"
+  },
+  "fugue/regula": {
+   "sha": "259c10a6a746e3c1eb84857d9f548cca463034af",
+   "dir": "fugue_regula"
+  },
+  "gavinbunney/terraform-provider-kubectl": {
+   "sha": "82633069ffbd8097e09866dd036b41b097bb4ed9",
+   "dir": "gavinbunney_terraform-provider-kubectl"
+  },
+  "grafana/loki": {
+   "sha": "fdeb199c5b0ae3fdf8a3f6fa7a91f64bdd0aa462",
+   "dir": "grafana_loki"
+  },
+  "helm/charts": {
+   "sha": "390ee6614b4bb0da96b397f9b382e3ddca9f59a4",
+   "dir": "helm_charts"
+  },
+  "helmfile/helmfile": {
+   "sha": "dfce9cf570650b1e6cfb46e4cc5c56b5acb1460b",
+   "dir": "helmfile_helmfile"
+  },
+  "isovalent/cilium-up-and-running": {
+   "sha": "a18436f3b57b82fc0eb502e0752c5973c714acaa",
+   "dir": "isovalent_cilium-up-and-running"
+  },
+  "knative/docs": {
+   "sha": "25a343ec5942cc7a40ce47b9d0a8acb35d97aef6",
+   "dir": "knative_docs"
+  },
+  "koki/short": {
+   "sha": "a835c983a6440775685f2d8cf14a9f30abb45ff4",
+   "dir": "koki_short"
+  },
+  "kontena/mortar": {
+   "sha": "3f85f19340d73b84330487c0f90008caaf289c81",
+   "dir": "kontena_mortar"
+  },
+  "kubernetes-sigs/bom": {
+   "sha": "68ce155f483296640c3bedfc7ee20102de0dea08",
+   "dir": "kubernetes-sigs_bom"
+  },
+  "kubernetes-sigs/kustomize": {
+   "sha": "f9936b688c3fed889921a36236eedaf5e8ff1abc",
+   "dir": "kubernetes-sigs_kustomize"
+  },
+  "kubernetes-sigs/metrics-server": {
+   "sha": "9c32bfc6312e093c91e33d80f7fd2149054d056d",
+   "dir": "kubernetes-sigs_metrics-server"
+  },
+  "kubernetes/examples": {
+   "sha": "d6b8cd27eacb51e651a1aa6f7c190a28713eff6e",
+   "dir": "kubernetes_examples"
+  },
+  "kubernetes/ingress-nginx": {
+   "sha": "dbb11b92ddb77bee9c35e462479129354c84f939",
+   "dir": "kubernetes_ingress-nginx"
+  },
+  "kubescape/regolibrary": {
+   "sha": "61cee05b48a0a1081feade871649f9fa0933e76e",
+   "dir": "kubescape_regolibrary"
+  },
+  "madhuakula/spotter": {
+   "sha": "3562e3456cc79f0b48c524523d067801baaa8740",
+   "dir": "madhuakula_spotter"
+  },
+  "meilisearch/meilisearch-kubernetes": {
+   "sha": "44153d547be18abbd84695ca1959f4588e06434b",
+   "dir": "meilisearch_meilisearch-kubernetes"
+  },
+  "mumoshu/helmfile-operator": {
+   "sha": "d2abe7cface04318ceebe474df7a3863e4b35447",
+   "dir": "mumoshu_helmfile-operator"
+  },
+  "pavan-kumar-99/medium-manifests": {
+   "sha": "6d46cb5ccfb5f998319f58339df95b2e1f30d532",
+   "dir": "pavan-kumar-99_medium-manifests"
+  },
+  "prometheus-operator/kube-prometheus": {
+   "sha": "f71fb6c77d108ad2b4cbf4d9771b56cbe92611fb",
+   "dir": "prometheus-operator_kube-prometheus"
+  },
+  "redhat-developer/kam": {
+   "sha": "9babd9f7536b2430b65dc9361f6a11b4025de29e",
+   "dir": "redhat-developer_kam"
+  },
+  "sassoftware/viya4-deployment": {
+   "sha": "ce4cda7af200401fb7fa18f4bea2b573b689e557",
+   "dir": "sassoftware_viya4-deployment"
+  },
+  "sigstore/k8s-manifest-sigstore": {
+   "sha": "2f021446c8a59fbbfd858322ee644201cc536913",
+   "dir": "sigstore_k8s-manifest-sigstore"
+  },
+  "skateco/skate": {
+   "sha": "b6c18559fbac326d17c3726304a2b4fa871cb5f5",
+   "dir": "skateco_skate"
+  },
+  "skyhook-io/radar": {
+   "sha": "d9a5a64228f8df8e27325613cbc692a8b13baeb3",
+   "dir": "skyhook-io_radar"
+  },
+  "sleighzy/k3s-traefik-forward-auth-openid-connect": {
+   "sha": "65ebc0837db803b90bc47373dbe0c42cb9e374fb",
+   "dir": "sleighzy_k3s-traefik-forward-auth-openid-connect"
+  },
+  "ssbostan/jenkins-stack-kubernetes": {
+   "sha": "4edb2b528d5d7a8b368c55e5dc1e45bb958626ca",
+   "dir": "ssbostan_jenkins-stack-kubernetes"
+  },
+  "strimzi/strimzi-kafka-operator": {
+   "sha": "f8080ecd88c0855d4247525b3ea84a9475f68083",
+   "dir": "strimzi_strimzi-kafka-operator"
+  },
+  "tektoncd/pipeline": {
+   "sha": "592dfb840f02a0e9e2920f75b1737372ceb17c15",
+   "dir": "tektoncd_pipeline"
+  },
+  "terramate-io/terramate": {
+   "sha": "1f2f2d72a5c15628b1801a69e0f9502b5d238c6b",
+   "dir": "terramate-io_terramate"
+  },
+  "tommy351/kosko": {
+   "sha": "8a0c345e816e14db9ced66da6526b392bea73330",
+   "dir": "tommy351_kosko"
+  },
+  "valencenet/valence-manifests": {
+   "sha": "77ecedc7ee0d7d57986c68157759d7b4fd5ebae9",
+   "dir": "valencenet_valence-manifests"
+  },
+  "yannh/kubeconform": {
+   "sha": "05632000e17dcc337e6f5f7c49932e80a3cfae21",
+   "dir": "yannh_kubeconform"
+  },
+  "zalando/postgres-operator": {
+   "sha": "80b7a074ada5221dc5eeac487c19faf810eb9cfe",
+   "dir": "zalando_postgres-operator"
+  },
+  "zimmertr/Kubernetes-Manifests": {
+   "sha": "373f6c38d82f270ff0d4a7d7c78ee6fa99a5044f",
+   "dir": "zimmertr_Kubernetes-Manifests"
+  }
+ }
+}

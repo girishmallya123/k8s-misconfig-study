@@ -4,8 +4,8 @@
 that audit them agree.**
 
 An empirical measurement study of Kubernetes configuration practices across 16,243
-publicly available manifests, plus a comparative audit of the four most widely used
-manifest-auditing tools on identical input.
+YAML documents (2,811 workloads) drawn from public sources, plus a comparative audit
+of the four most widely used manifest-auditing tools on identical input.
 
 ## Research questions
 
@@ -19,18 +19,28 @@ manifest-auditing tools on identical input.
 
 ## Headline findings (October 2026 corpus)
 
-- Service-account tokens are automounted in **89–96%** of workloads; CPU limits are missing
-  in **75–86%**; images are not digest-pinned in **76–98%** — across both corpus arms.
+- Service-account tokens are automounted in **85–96%** of workloads; CPU limits are missing
+  in **79–86%**; images are not digest-pinned in **84–98%** — across both corpus arms
+  (workload-level rates, engine v3).
 - Curated Helm charts are better hardened than raw GitHub manifests, but by **~1.3–1.7×**,
   not the 2–3× a top-60-charts sample suggests (best-chart bias, measured and corrected).
 - Restricting the analysis to production manifests only (excluding examples and test
-  fixtures) barely moves the numbers: the risky defaults are in shipped code, not test files.
-- **RQ3:** the widest tool (Checkov) covers only ~16 of 25 observed practices. Digest pinning
-  is checked by 1 of 4 tools; committed Secret objects (415) and wildcard RBAC (341 findings)
-  by none. On identical input, "CPU limits missing" yields 76 / 343 / 411 / 416 findings across
-  the four tools against 502 container-level cases — tool choice alone swings the answer ~5×.
-  The tools agree almost exactly only on explicit dangers (e.g. privileged containers: 26–27
-  from every tool), and diverge on default-insecure configurations, where most risk lives.
+  fixtures) barely moves the headline numbers: SA tokens are still automounted in
+  **88.6%** of production workloads (96.2% corpus-wide) and CPU limits are missing in
+  **75.3%** (79.0%). The risky defaults are in shipped code, not test files.
+- **RQ3** (Helm arm, identical input for all four tools): the widest tool (Checkov) covers
+  only ~16 of 25 observed practices. Digest pinning is checked by 1 of 4 tools. Wildcard
+  RBAC has no *default-enabled* check that catches it broadly — Checkov partially flags
+  it (29 of 155 findings) and kube-linter ships wildcard checks that are off by default.
+  No tool inspects committed Secret objects' *contents*: none distinguishes a Secret
+  holding real credential material from an empty or placeholder one (validation sampling
+  found ~88% of committed Secrets are empty/placeholder — the exposure is the
+  credential-bearing minority). Counts for the same practice diverge by counting
+  semantics: "CPU limits missing" yields 343 / 411 / 416 / 497 findings across the four
+  tools against 502 container-level cases — a ~1.4× spread from pod- vs container-level
+  units and merged request/limit checks. The tools agree almost exactly only on explicit
+  dangers (e.g. privileged containers: 26–27 from every tool), and diverge on
+  default-insecure configurations, where most risk lives.
 
 Full numbers: `results/` (stats JSONs, sensitivity tables, tool coverage matrix).
 
@@ -43,7 +53,8 @@ Full numbers: `results/` (stats JSONs, sensitivity tables, tool coverage matrix)
 
 The corpus itself is **not redistributed here** (third-party manifests carry mixed
 licenses). The collection scripts and the per-source collect logs in `results/` are the
-corpus manifest: running the collectors rebuilds it from public sources.
+corpus manifest: running the collectors rebuilds it from public sources. The GitHub
+snapshots analyzed are pinned by commit in `results/github_commit_shas.json`.
 
 ## Repository layout
 
@@ -68,8 +79,9 @@ bash    scripts/run_tools.sh         # RQ3: kube-linter / kubeaudit / Polaris / 
 
 Prevalence numbers are only as good as the rules' precision. `results/labeling_sample_v2.csv`
 is a 457-finding stratified sample (all high-severity findings included, ~10% hidden duplicates
-for agreement scoring) with a labeling protocol in `results/labeling_protocol.md`. Per-rule
-precision from that pass will be published with the paper.
+for agreement scoring) governed by the labeling protocol in `results/labeling_protocol_v3.md`
+(a blinded 30-row subset for inter-rater reliability lives in `results/kappa_subset/`).
+Per-rule precision from that pass will be published with the paper.
 
 ## Status
 

@@ -1,22 +1,25 @@
 # RQ3 — Auditing the auditors: tool coverage matrix (Helm arm)
 
 Input (identical for all tools): `corpus/helm` — 151 rendered charts, 2,616 documents,
-402 workloads, 595 containers. Our rule engine found 4,372 findings on this input.
+402 workloads, 595 containers. Our rule engine found 4,180 findings on this input
+(engine v3; the v2 engine reported 4,372 — the corrections are itemized in
+`results/cluster_prevalence.md`).
 Tools: kube-linter 0.8.3, kubeaudit 0.22.2, Polaris 10.2.5, Checkov 3.3.30, all default settings.
 Raw outputs: `results/tools/`. Counts below are each tool's reported findings for the named
-check; "—" means the tool has no check for the practice. Units differ by tool (per-container,
-per-pod, per-resource) — that divergence is itself a result, see Finding 2.
+check; "—" means no check for the practice is enabled in the tool's default configuration
+(a check may exist but ship disabled — e.g. kube-linter's wildcard-in-rules). Units differ
+by tool (per-container, per-pod, per-resource) — that divergence is itself a result, see Finding 2.
 
 | Our rule (our findings) | kube-linter | kubeaudit | Polaris | Checkov |
 |---|---|---|---|---|
-| SA_TOKEN_AUTOMOUNTED (357) | — | AutomountSATokenTrueAndDefaultSA: 91 (narrower: default SA only) | — | CKV_K8S_38: 356 |
+| SA_TOKEN_AUTOMOUNTED (342) | — | AutomountSATokenTrueAndDefaultSA: 91 (narrower: default SA only) | — | CKV_K8S_38: 356 |
 | IMG_NO_DIGEST (576) | — | — | — (pullPolicyNotAlways: 517 is a proxy, not pinning) | CKV_K8S_43: 391 — **only tool that checks** |
 | IMG_UNTAGGED (14) | merged ↓ | ImageTagMissing: 14 (exact) | tagNotSpecified: 55 (merged) | merged ↓ |
 | IMG_LATEST (41) | latest-tag: 55 (= 41 latest + 14 untagged, exact reconciliation) | — | merged ↑ | CKV_K8S_14: 51 (merged) |
 | RES_NO_CPU_LIMIT (502) | unset-cpu-requirements: 416 (merged w/ requests) | LimitsCPUNotSet: 76; LimitsNotSet: 421 (pod-level units) | cpuLimitsMissing: 411 | CKV_K8S_11: 343 |
 | RES_NO_MEM_LIMIT (479) | unset-memory-requirements: 479 (**exact**) | LimitsMemoryNotSet: 53; LimitsNotSet: 421 | memoryLimitsMissing: 388 | CKV_K8S_13: 327 |
 | RES_NO_REQUESTS (414) | merged into unset-* | — (no requests auditor) | cpuRequestsMissing: 335; memoryRequestsMissing: 334 | CKV_K8S_10: 177; CKV_K8S_12: 178 |
-| SEC_NO_SECCOMP (363) | — | SeccompProfileMissing: 239 | linuxHardening: 298 (composite) | CKV_K8S_31: 240 |
+| SEC_NO_SECCOMP (370) | — | SeccompProfileMissing: 239 | linuxHardening: 298 (composite) | CKV_K8S_31: 240 |
 | SEC_APE_NOT_DISABLED (309) | privilege-escalation-container: 34 | APE Nil: 295 + True: 10 = 305 | privilegeEscalationAllowed: 309 (**exact**) | CKV_K8S_20: 201 |
 | SEC_ROOT_NOT_PREVENTED (293) | run-as-non-root: 280 | RunAsNonRootNil: 254 (+CSCRoot: 21) | runAsRootAllowed: 280 | CKV_K8S_23: 162 (narrower) |
 | SEC_RUN_AS_ROOT_EXPLICIT (23) | merged ↑ | RunAsUserCSCRoot: 21 + PSCRoot: 1 = 22 | merged ↑ | merged ↑ |
@@ -26,8 +29,8 @@ per-pod, per-resource) — that divergence is itself a result, see Finding 2.
 | HOST_NETWORK (23) | host-network: 23 (**exact**) | NamespaceHostNetworkTrue: 23 (**exact**) | — (hostPortSet: 3 is a different property) | CKV_K8S_19: 23 (**exact**) |
 | HOST_PID (9) | host-pid: 9 (**exact**) | NamespaceHostPIDTrue: 9 (**exact**) | — | CKV_K8S_17: 9 (**exact**) |
 | HOST_IPC (1) | host-ipc: 1 (**exact**) | NamespaceHostIPCTrue: 1 (**exact**) | — | CKV_K8S_18: 1 (**exact**) |
-| REL_NO_LIVENESS_PROBE (303) | liveness-port: 26 — checks probe *port validity*, NOT missing probes | — | livenessProbeMissing: 211 | CKV_K8S_8: 157 |
-| REL_NO_READINESS_PROBE (296) | readiness-port: 24 — same caveat | — | readinessProbeMissing: 205 | CKV_K8S_9: 144 |
+| REL_NO_LIVENESS_PROBE (211) | liveness-port: 26 — checks probe *port validity*, NOT missing probes | — | livenessProbeMissing: 211 | CKV_K8S_8: 157 |
+| REL_NO_READINESS_PROBE (204) | readiness-port: 24 — same caveat | — | readinessProbeMissing: 205 | CKV_K8S_9: 144 |
 | SECRET_LITERAL_ENV (29) | env-var-secret: 14 | — | sensitiveContainerEnvVar: 30 | CKV_K8S_35: 84 (broader) |
 | SECRET_COMMITTED (122) | — | — | — | — (**no tool flags committed Secret objects**) |
 | RBAC_WILDCARD_VERBS (91) | — | — | — (RBAC checks target exec/cluster-admin patterns) | CKV_K8S_49: 29 (partial, merged w/ resources) |
@@ -52,12 +55,22 @@ Polaris ~13, Checkov ~16. **No tool covers more than about two-thirds of observe
 
 1. **The most common risky practice is nearly unchecked.** Unpinned image digests affect 97.5%
    of Helm workloads (576 container findings); exactly one of four tools (Checkov) has a check
-   for it, and it reports only 391. Committed Secret objects (122) and wildcard RBAC (155
-   findings) are invisible to all four tools at default settings.
-2. **Same check, wildly different counts on identical input.** "CPU limits missing" yields
-   76 (kubeaudit) / 343 (Checkov) / 411 (Polaris) / 416 (kube-linter) against 502 container-level
-   cases. The spread comes from counting units (pod vs container vs resource) and nil-vs-false
-   semantics — so a "compliance rate" from any single tool is largely an artifact of the tool.
+   for it, and it reports only 391. Wildcard RBAC (155 findings) has no default-enabled check
+   that catches it broadly: Checkov's CKV_K8S_49 partially flags it (29 findings, verbs and
+   resources merged), and kube-linter ships wildcard checks that are off by default. Committed
+   Secret objects (122) are not content-inspected by any tool at default settings — no tool
+   distinguishes a Secret holding real credential material from an empty or placeholder one
+   (validation sampling: ~88% of committed Secrets are empty/placeholder), so the
+   credential-bearing minority is invisible in every tool's output.
+2. **Same practice, different counts on identical input — a semantics spread, not chaos.**
+   "CPU limits missing" yields 343 (Checkov) / 411 (Polaris) / 416 (kube-linter) / 497
+   (kubeaudit) against 502 container-level cases — about 1.4×. kubeaudit only looks like an
+   outlier if its auditors are read in isolation: LimitsCPUNotSet (76) covers just the
+   limits-block-present case, while LimitsNotSet (421) covers no-limits-at-all, and
+   421 + 76 = 497 reconciles with the engine within 1% (memory likewise: 421 + 53 = 474
+   vs 479). The residual spread comes from counting units (pod vs container vs resource),
+   merged request/limit checks, and nil-vs-false semantics — so a "compliance rate" from
+   any single tool is still partly an artifact of the tool, but a ~1.4× artifact.
 3. **Tools agree exactly on the explicit, diverge on the implicit.** Privileged containers
    (26–27 everywhere), hostNetwork (23 ×3 tools), hostPID (9), hostIPC (1) reconcile almost
    perfectly. Divergence concentrates in default-insecure configurations — fields left unset —
