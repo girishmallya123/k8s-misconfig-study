@@ -1,0 +1,308 @@
+[
+  {
+    "repo": "kubernetes-sigs/kustomize",
+    "status": "ok",
+    "files_kept": 150,
+    "docs_kept": 188
+  },
+  {
+    "repo": "argoproj/argo-cd",
+    "status": "ok",
+    "files_kept": 2120,
+    "docs_kept": 2775
+  },
+  {
+    "repo": "argoproj/argo-rollouts",
+    "status": "ok",
+    "files_kept": 274,
+    "docs_kept": 606
+  },
+  {
+    "repo": "fluxcd/flux2",
+    "status": "ok",
+    "files_kept": 146,
+    "docs_kept": 183
+  },
+  {
+    "repo": "knative/docs",
+    "status": "ok",
+    "files_kept": 112,
+    "docs_kept": 160
+  },
+  {
+    "repo": "tektoncd/pipeline",
+    "status": "ok",
+    "files_kept": 300,
+    "docs_kept": 537
+  },
+  {
+    "repo": "crossplane/crossplane",
+    "status": "ok",
+    "files_kept": 362,
+    "docs_kept": 385
+  },
+  {
+    "repo": "grafana/loki",
+    "status": "ok",
+    "files_kept": 171,
+    "docs_kept": 298
+  },
+  {
+    "repo": "elastic/cloud-on-k8s",
+    "status": "ok",
+    "files_kept": 232,
+    "docs_kept": 1286
+  },
+  {
+    "repo": "zalando/postgres-operator",
+    "status": "ok",
+    "files_kept": 37,
+    "docs_kept": 54
+  },
+  {
+    "repo": "strimzi/strimzi-kafka-operator",
+    "status": "ok",
+    "files_kept": 407,
+    "docs_kept": 636
+  },
+  {
+    "repo": "kubernetes-sigs/metrics-server",
+    "status": "ok",
+    "files_kept": 21,
+    "docs_kept": 30
+  },
+  {
+    "repo": "helmfile/helmfile",
+    "status": "ok",
+    "files_kept": 47,
+    "docs_kept": 56
+  },
+  {
+    "repo": "yannh/kubeconform",
+    "status": "ok",
+    "files_kept": 36,
+    "docs_kept": 65
+  },
+  {
+    "repo": "Yolean/kubernetes-kafka",
+    "status": "ok",
+    "files_kept": 83,
+    "docs_kept": 111
+  },
+  {
+    "repo": "fugue/regula",
+    "status": "ok",
+    "files_kept": 40,
+    "docs_kept": 84
+  },
+  {
+    "repo": "gavinbunney/terraform-provider-kubectl",
+    "status": "ok",
+    "files_kept": 11,
+    "docs_kept": 20
+  },
+  {
+    "repo": "MasayaAoyama/kubernetes-perfect-guide",
+    "status": "ok",
+    "files_kept": 298,
+    "docs_kept": 349
+  },
+  {
+    "repo": "dekorateio/dekorate",
+    "status": "ok",
+    "files_kept": 14,
+    "docs_kept": 14
+  },
+  {
+    "repo": "kubernetes-sigs/bom",
+    "status": "ok",
+    "files_kept": 0,
+    "docs_kept": 0
+  },
+  {
+    "repo": "WoozyMasta/kube-dump",
+    "status": "ok",
+    "files_kept": 10,
+    "docs_kept": 14
+  },
+  {
+    "repo": "tommy351/kosko",
+    "status": "ok",
+    "files_kept": 17,
+    "docs_kept": 19
+  },
+  {
+    "repo": "ctk-hq/ctk",
+    "status": "ok",
+    "files_kept": 0,
+    "docs_kept": 0
+  },
+  {
+    "repo": "cloudfoundry/cf-for-k8s",
+    "status": "ok",
+    "files_kept": 119,
+    "docs_kept": 409
+  },
+  {
+    "repo": "meilisearch/meilisearch-kubernetes",
+    "status": "ok",
+    "files_kept": 1,
+    "docs_kept": 5
+  },
+  {
+    "repo": "skateco/skate",
+    "status": "ok",
+    "files_kept": 14,
+    "docs_kept": 14
+  },
+  {
+    "repo": "alekc/terraform-provider-kubectl",
+    "status": "ok",
+    "files_kept": 10,
+    "docs_kept": 19
+  },
+  {
+    "repo": "ssbostan/jenkins-stack-kubernetes",
+    "status": "ok",
+    "files_kept": 13,
+    "docs_kept": 15
+  },
+  {
+    "repo": "SuchanMadhikarmi/kubernetes-zero-to-production",
+    "status": "ok",
+    "files_kept": 45,
+    "docs_kept": 56
+  },
+  {
+    "repo": "digitalocean/doks-debug",
+    "status": "ok",
+    "files_kept": 2,
+    "docs_kept": 2
+  },
+  {
+    "repo": "MacroPower/kat",
+    "status": "ok",
+    "files_kept": 5,
+    "docs_kept": 6
+  },
+  {
+    "repo": "anderseknert/kube-review",
+    "status": "ok",
+    "files_kept": 4,
+    "docs_kept": 4
+  },
+  {
+    "repo": "kontena/mortar",
+    "status": "ok",
+    "files_kept": 6,
+    "docs_kept": 7
+  },
+  {
+    "repo": "redhat-developer/kam",
+    "status": "ok",
+    "files_kept": 3,
+    "docs_kept": 3
+  },
+  {
+    "repo": "kubescape/regolibrary",
+    "status": "ok",
+    "files_kept": 1412,
+    "docs_kept": 1424
+  },
+  {
+    "repo": "koki/short",
+    "status": "ok",
+    "files_kept": 201,
+    "docs_kept": 209
+  },
+  {
+    "repo": "Karandash8/make-argocd-fly",
+    "status": "ok",
+    "files_kept": 171,
+    "docs_kept": 173
+  },
+  {
+    "repo": "isovalent/cilium-up-and-running",
+    "status": "ok",
+    "files_kept": 141,
+    "docs_kept": 280
+  },
+  {
+    "repo": "zimmertr/Kubernetes-Manifests",
+    "status": "ok",
+    "files_kept": 122,
+    "docs_kept": 176
+  },
+  {
+    "repo": "crumbhole/argocd-vault-replacer",
+    "status": "ok",
+    "files_kept": 11,
+    "docs_kept": 12
+  },
+  {
+    "repo": "pavan-kumar-99/medium-manifests",
+    "status": "ok",
+    "files_kept": 24,
+    "docs_kept": 65
+  },
+  {
+    "repo": "ericchiang/terraform-provider-k8s",
+    "status": "ok",
+    "files_kept": 2,
+    "docs_kept": 2
+  },
+  {
+    "repo": "sigstore/k8s-manifest-sigstore",
+    "status": "ok",
+    "files_kept": 29,
+    "docs_kept": 33
+  },
+  {
+    "repo": "sassoftware/viya4-deployment",
+    "status": "ok",
+    "files_kept": 38,
+    "docs_kept": 45
+  },
+  {
+    "repo": "mumoshu/helmfile-operator",
+    "status": "ok",
+    "files_kept": 2,
+    "docs_kept": 2
+  },
+  {
+    "repo": "valencenet/valence-manifests",
+    "status": "ok",
+    "files_kept": 35,
+    "docs_kept": 83
+  },
+  {
+    "repo": "madhuakula/spotter",
+    "status": "ok",
+    "files_kept": 4,
+    "docs_kept": 10
+  },
+  {
+    "repo": "cuebernetes/cuebectl",
+    "status": "ok",
+    "files_kept": 0,
+    "docs_kept": 0
+  },
+  {
+    "repo": "sleighzy/k3s-traefik-forward-auth-openid-connect",
+    "status": "ok",
+    "files_kept": 6,
+    "docs_kept": 6
+  },
+  {
+    "repo": "skyhook-io/radar",
+    "status": "ok",
+    "files_kept": 105,
+    "docs_kept": 308
+  },
+  {
+    "repo": "terramate-io/terramate",
+    "status": "ok",
+    "files_kept": 0,
+    "docs_kept": 0
+  }
+]

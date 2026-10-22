@@ -1,0 +1,65 @@
+[
+  {
+    "repo": "kubernetes/examples",
+    "status": "ok",
+    "yaml_files_seen": 250,
+    "files_kept": 242,
+    "docs_kept": 272
+  },
+  {
+    "repo": "argoproj/argocd-example-apps",
+    "status": "ok",
+    "yaml_files_seen": 71,
+    "files_kept": 51,
+    "docs_kept": 62
+  },
+  {
+    "repo": "GoogleCloudPlatform/microservices-demo",
+    "status": "ok",
+    "yaml_files_seen": 103,
+    "files_kept": 73,
+    "docs_kept": 168
+  },
+  {
+    "repo": "GoogleCloudPlatform/bank-of-anthos",
+    "status": "ok",
+    "yaml_files_seen": 189,
+    "files_kept": 165,
+    "docs_kept": 248
+  },
+  {
+    "repo": "prometheus-operator/kube-prometheus",
+    "status": "ok",
+    "yaml_files_seen": 124,
+    "files_kept": 113,
+    "docs_kept": 118
+  },
+  {
+    "repo": "kubernetes/ingress-nginx",
+    "status": "ok",
+    "yaml_files_seen": 214,
+    "files_kept": 64,
+    "docs_kept": 250
+  },
+  {
+    "repo": "argoproj/argo-workflows",
+    "status": "ok",
+    "yaml_files_seen": 982,
+    "files_kept": 934,
+    "docs_kept": 1185
+  },
+  {
+    "repo": "fluxcd/flux2-kustomize-helm-example",
+    "status": "ok",
+    "yaml_files_seen": 29,
+    "files_kept": 23,
+    "docs_kept": 30
+  },
+  {
+    "repo": "helm/charts",
+    "status": "ok",
+    "yaml_files_seen": 4077,
+    "files_kept": 56,
+    "docs_kept": 56
+  }
+]

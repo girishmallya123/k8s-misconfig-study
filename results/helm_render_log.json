@@ -1,0 +1,409 @@
+[
+  {
+    "chart": "kube-prometheus-stack",
+    "repo": "prometheus-community",
+    "version": "92.11.0",
+    "status": "ok",
+    "docs_approx": 126
+  },
+  {
+    "chart": "cert-manager",
+    "repo": "cert-manager",
+    "version": "1.21.2",
+    "status": "ok",
+    "docs_approx": 44
+  },
+  {
+    "chart": "argo-cd",
+    "repo": "argo",
+    "version": "10.10.5",
+    "status": "ok",
+    "docs_approx": 59
+  },
+  {
+    "chart": "ingress-nginx",
+    "repo": "ingress-nginx",
+    "version": "4.15.1",
+    "status": "ok",
+    "docs_approx": 19
+  },
+  {
+    "chart": "prometheus",
+    "repo": "prometheus-community",
+    "version": "29.37.1",
+    "status": "ok",
+    "docs_approx": 23
+  },
+  {
+    "chart": "redis",
+    "repo": "bitnami",
+    "version": "28.3.1",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "traefik",
+    "repo": "traefik",
+    "version": "42.1.2",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "postgresql",
+    "repo": "bitnami",
+    "version": "18.12.14",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "kubernetes-dashboard",
+    "repo": "k8s-dashboard",
+    "version": "7.14.0",
+    "status": "ok",
+    "docs_approx": 28
+  },
+  {
+    "chart": "loki",
+    "repo": "grafana",
+    "version": "7.3.0",
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "metrics-server",
+    "repo": "metrics-server",
+    "version": "3.14.0",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "vault",
+    "repo": "hashicorp",
+    "version": "0.34.1",
+    "status": "ok",
+    "docs_approx": 13
+  },
+  {
+    "chart": "gitlab",
+    "repo": "gitlab",
+    "version": "10.5.1",
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "harbor",
+    "repo": "harbor",
+    "version": "1.19.4",
+    "status": "ok",
+    "docs_approx": 31
+  },
+  {
+    "chart": "keycloak",
+    "repo": "bitnami",
+    "version": "25.2.0",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "jenkins",
+    "repo": "jenkinsci",
+    "version": "5.9.72",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "external-secrets",
+    "repo": "external-secrets-operator",
+    "version": "2.13.0",
+    "status": "ok",
+    "docs_approx": 44
+  },
+  {
+    "chart": "external-dns",
+    "repo": "external-dns",
+    "version": "1.23.0",
+    "status": "render failed",
+    "stderr": "- policy: Invalid type. Expected: string, given: null"
+  },
+  {
+    "chart": "longhorn",
+    "repo": "longhorn",
+    "version": "1.13.0",
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "rabbitmq",
+    "repo": "bitnami",
+    "version": "16.0.14",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "gitlab-runner",
+    "repo": "gitlab",
+    "version": "0.94.0",
+    "status": "ok",
+    "docs_approx": 2
+  },
+  {
+    "chart": "aws-load-balancer-controller",
+    "repo": "aws",
+    "version": "3.6.1",
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "kafka",
+    "repo": "bitnami",
+    "version": "32.4.3",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "cilium",
+    "repo": "cilium",
+    "version": "1.21.0-pre.3",
+    "status": "ok",
+    "docs_approx": 25
+  },
+  {
+    "chart": "external-dns",
+    "repo": "bitnami",
+    "version": "9.0.3",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "airflow",
+    "repo": "apache-airflow",
+    "version": "1.22.0",
+    "status": "ok",
+    "docs_approx": 114
+  },
+  {
+    "chart": "mysql",
+    "repo": "bitnami",
+    "version": "14.0.3",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "elasticsearch",
+    "repo": "elastic",
+    "version": "8.5.1",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "mongodb",
+    "repo": "bitnami",
+    "version": "20.0.5",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "velero",
+    "repo": "vmware-tanzu",
+    "version": "12.2.1",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "nextcloud",
+    "repo": "nextcloud",
+    "version": "9.4.1",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "minio",
+    "repo": "bitnami",
+    "version": "17.0.21",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "cluster-autoscaler",
+    "repo": "cluster-autoscaler",
+    "version": "9.59.0",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "metallb",
+    "repo": "metallb",
+    "version": "0.16.1",
+    "status": "ok",
+    "docs_approx": 42
+  },
+  {
+    "chart": "istiod",
+    "repo": "istio-official",
+    "version": "1.31.0-rc.0",
+    "status": "ok",
+    "docs_approx": 24
+  },
+  {
+    "chart": "rancher",
+    "repo": "rancher-stable",
+    "version": "2.15.2",
+    "status": "ok",
+    "docs_approx": 19
+  },
+  {
+    "chart": "kyverno",
+    "repo": "kyverno",
+    "version": "3.9.2",
+    "status": "ok",
+    "docs_approx": 80
+  },
+  {
+    "chart": "cloudnative-pg",
+    "repo": "cloudnative-pg",
+    "version": "0.29.1",
+    "status": "ok",
+    "docs_approx": 29
+  },
+  {
+    "chart": "argo-workflows",
+    "repo": "argo",
+    "version": "2.0.13",
+    "status": "ok",
+    "docs_approx": 23
+  },
+  {
+    "chart": "gitea",
+    "repo": "gitea",
+    "version": "12.7.0",
+    "status": "ok",
+    "docs_approx": 30
+  },
+  {
+    "chart": "sonarqube",
+    "repo": "sonarqube",
+    "version": "2026.5.1002",
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "fluent-bit",
+    "repo": "fluent",
+    "version": "0.58.3",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "datadog",
+    "repo": "datadog",
+    "version": "3.259.0",
+    "status": "ok",
+    "docs_approx": 38
+  },
+  {
+    "chart": "oauth2-proxy",
+    "repo": "oauth2-proxy",
+    "version": "10.7.1",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "pgadmin4",
+    "repo": "runix",
+    "version": "1.70.4",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "nginx",
+    "repo": "bitnami",
+    "version": "25.2.8",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "wordpress",
+    "repo": "bitnami",
+    "version": "34.2.2",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "thanos",
+    "repo": "bitnami",
+    "version": "17.3.1",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  },
+  {
+    "chart": "authentik",
+    "repo": "goauthentik",
+    "version": "2026.8.5",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "sealed-secrets",
+    "repo": "bitnami-labs",
+    "version": "2.18.6",
+    "status": "ok",
+    "docs_approx": 10
+  },
+  {
+    "chart": "nginx-ingress",
+    "repo": "nginx",
+    "version": "2.8.0",
+    "status": "ok",
+    "docs_approx": 13
+  },
+  {
+    "chart": "keda",
+    "repo": "kedacore",
+    "version": "2.21.0",
+    "status": "ok",
+    "docs_approx": 29
+  },
+  {
+    "chart": "argocd-apps",
+    "repo": "argo",
+    "version": "2.0.7",
+    "status": "ok",
+    "docs_approx": 1
+  },
+  {
+    "chart": "nfs-subdir-external-provisioner",
+    "repo": "nfs-subdir-external-provisioner",
+    "version": "4.0.18",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "artifact-hub",
+    "repo": "artifact-hub",
+    "version": "1.23.0",
+    "status": "ok",
+    "docs_approx": 22
+  },
+  {
+    "chart": "kube-state-metrics",
+    "repo": "prometheus-community",
+    "version": "8.6.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "pihole",
+    "repo": "mojo2600",
+    "version": "2.38.0",
+    "status": "ok",
+    "docs_approx": 8
+  },
+  {
+    "chart": "consul",
+    "repo": "hashicorp",
+    "version": "2.1.0-rc2",
+    "status": "ok",
+    "docs_approx": 84
+  },
+  {
+    "chart": "n8n",
+    "repo": "community-charts",
+    "version": "1.24.43",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "mariadb",
+    "repo": "bitnami",
+    "version": "28.1.1",
+    "status": "download/extract failed: <urlopen error unknown url type: oci>"
+  }
+]

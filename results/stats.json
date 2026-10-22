@@ -1,0 +1,323 @@
+{
+  "helm": {
+    "files": 151,
+    "docs": 2616,
+    "workloads": 402,
+    "containers": 595,
+    "secret_objects": 122,
+    "docs_deprecated_api": 2,
+    "files_unparseable": 1,
+    "rules": {
+      "DEPRECATED_API": {
+        "findings": 2,
+        "pct_containers": 0.3,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "HOST_IPC": {
+        "findings": 1,
+        "pct_containers": 0.2,
+        "workloads_affected": 1,
+        "pct_workloads": 0.2
+      },
+      "HOST_NETWORK": {
+        "findings": 23,
+        "pct_containers": 3.9,
+        "workloads_affected": 23,
+        "pct_workloads": 5.7
+      },
+      "HOST_PID": {
+        "findings": 9,
+        "pct_containers": 1.5,
+        "workloads_affected": 9,
+        "pct_workloads": 2.2
+      },
+      "IMG_LATEST": {
+        "findings": 41,
+        "pct_containers": 6.9,
+        "workloads_affected": 37,
+        "pct_workloads": 9.2
+      },
+      "IMG_NO_DIGEST": {
+        "findings": 576,
+        "pct_containers": 96.8,
+        "workloads_affected": 392,
+        "pct_workloads": 97.5
+      },
+      "IMG_UNTAGGED": {
+        "findings": 14,
+        "pct_containers": 2.4,
+        "workloads_affected": 14,
+        "pct_workloads": 3.5
+      },
+      "RBAC_CLUSTER_ADMIN_BINDING": {
+        "findings": 7,
+        "pct_containers": 1.2,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "RBAC_WILDCARD_RESOURCES": {
+        "findings": 64,
+        "pct_containers": 10.8,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "RBAC_WILDCARD_VERBS": {
+        "findings": 91,
+        "pct_containers": 15.3,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "REL_NO_LIVENESS_PROBE": {
+        "findings": 303,
+        "pct_containers": 50.9,
+        "workloads_affected": 188,
+        "pct_workloads": 46.8
+      },
+      "REL_NO_READINESS_PROBE": {
+        "findings": 296,
+        "pct_containers": 49.7,
+        "workloads_affected": 182,
+        "pct_workloads": 45.3
+      },
+      "RES_NO_CPU_LIMIT": {
+        "findings": 502,
+        "pct_containers": 84.4,
+        "workloads_affected": 344,
+        "pct_workloads": 85.6
+      },
+      "RES_NO_MEM_LIMIT": {
+        "findings": 479,
+        "pct_containers": 80.5,
+        "workloads_affected": 328,
+        "pct_workloads": 81.6
+      },
+      "RES_NO_REQUESTS": {
+        "findings": 414,
+        "pct_containers": 69.6,
+        "workloads_affected": 287,
+        "pct_workloads": 71.4
+      },
+      "SA_TOKEN_AUTOMOUNTED": {
+        "findings": 357,
+        "pct_containers": 60.0,
+        "workloads_affected": 357,
+        "pct_workloads": 88.8
+      },
+      "SECRET_COMMITTED": {
+        "findings": 122,
+        "pct_containers": 20.5,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "SECRET_LITERAL_ENV": {
+        "findings": 29,
+        "pct_containers": 4.9,
+        "workloads_affected": 27,
+        "pct_workloads": 6.7
+      },
+      "SEC_APE_NOT_DISABLED": {
+        "findings": 309,
+        "pct_containers": 51.9,
+        "workloads_affected": 201,
+        "pct_workloads": 50.0
+      },
+      "SEC_CAPABILITY_ADDED": {
+        "findings": 15,
+        "pct_containers": 2.5,
+        "workloads_affected": 15,
+        "pct_workloads": 3.7
+      },
+      "SEC_DANGEROUS_CAPABILITY": {
+        "findings": 12,
+        "pct_containers": 2.0,
+        "workloads_affected": 8,
+        "pct_workloads": 2.0
+      },
+      "SEC_NO_SECCOMP": {
+        "findings": 363,
+        "pct_containers": 61.0,
+        "workloads_affected": 243,
+        "pct_workloads": 60.4
+      },
+      "SEC_PRIVILEGED": {
+        "findings": 27,
+        "pct_containers": 4.5,
+        "workloads_affected": 22,
+        "pct_workloads": 5.5
+      },
+      "SEC_ROOT_NOT_PREVENTED": {
+        "findings": 293,
+        "pct_containers": 49.2,
+        "workloads_affected": 182,
+        "pct_workloads": 45.3
+      },
+      "SEC_RUN_AS_ROOT_EXPLICIT": {
+        "findings": 23,
+        "pct_containers": 3.9,
+        "workloads_affected": 23,
+        "pct_workloads": 5.7
+      }
+    }
+  },
+  "github": {
+    "files": 9134,
+    "docs": 13627,
+    "workloads": 2409,
+    "containers": 2618,
+    "secret_objects": 293,
+    "docs_deprecated_api": 254,
+    "rules": {
+      "DEPRECATED_API": {
+        "findings": 254,
+        "pct_containers": 9.7,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "HOST_IPC": {
+        "findings": 15,
+        "pct_containers": 0.6,
+        "workloads_affected": 15,
+        "pct_workloads": 0.6
+      },
+      "HOST_NETWORK": {
+        "findings": 312,
+        "pct_containers": 11.9,
+        "workloads_affected": 305,
+        "pct_workloads": 12.7
+      },
+      "HOST_PID": {
+        "findings": 22,
+        "pct_containers": 0.8,
+        "workloads_affected": 22,
+        "pct_workloads": 0.9
+      },
+      "IMG_LATEST": {
+        "findings": 294,
+        "pct_containers": 11.2,
+        "workloads_affected": 276,
+        "pct_workloads": 11.5
+      },
+      "IMG_NO_DIGEST": {
+        "findings": 2456,
+        "pct_containers": 93.8,
+        "workloads_affected": 2083,
+        "pct_workloads": 86.5
+      },
+      "IMG_UNTAGGED": {
+        "findings": 662,
+        "pct_containers": 25.3,
+        "workloads_affected": 580,
+        "pct_workloads": 24.1
+      },
+      "RBAC_CLUSTER_ADMIN_BINDING": {
+        "findings": 13,
+        "pct_containers": 0.5,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "RBAC_WILDCARD_RESOURCES": {
+        "findings": 74,
+        "pct_containers": 2.8,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "RBAC_WILDCARD_VERBS": {
+        "findings": 95,
+        "pct_containers": 3.6,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "REL_NO_LIVENESS_PROBE": {
+        "findings": 1821,
+        "pct_containers": 69.6,
+        "workloads_affected": 1525,
+        "pct_workloads": 63.3
+      },
+      "REL_NO_READINESS_PROBE": {
+        "findings": 1835,
+        "pct_containers": 70.1,
+        "workloads_affected": 1548,
+        "pct_workloads": 64.3
+      },
+      "RES_NO_CPU_LIMIT": {
+        "findings": 2229,
+        "pct_containers": 85.1,
+        "workloads_affected": 1902,
+        "pct_workloads": 79.0
+      },
+      "RES_NO_MEM_LIMIT": {
+        "findings": 2230,
+        "pct_containers": 85.2,
+        "workloads_affected": 1898,
+        "pct_workloads": 78.8
+      },
+      "RES_NO_REQUESTS": {
+        "findings": 1933,
+        "pct_containers": 73.8,
+        "workloads_affected": 1615,
+        "pct_workloads": 67.0
+      },
+      "SA_TOKEN_AUTOMOUNTED": {
+        "findings": 2339,
+        "pct_containers": 89.3,
+        "workloads_affected": 2322,
+        "pct_workloads": 96.4
+      },
+      "SECRET_COMMITTED": {
+        "findings": 293,
+        "pct_containers": 11.2,
+        "workloads_affected": 0,
+        "pct_workloads": 0.0
+      },
+      "SECRET_LITERAL_ENV": {
+        "findings": 115,
+        "pct_containers": 4.4,
+        "workloads_affected": 108,
+        "pct_workloads": 4.5
+      },
+      "SEC_APE_NOT_DISABLED": {
+        "findings": 2240,
+        "pct_containers": 85.6,
+        "workloads_affected": 1916,
+        "pct_workloads": 79.5
+      },
+      "SEC_CAPABILITY_ADDED": {
+        "findings": 39,
+        "pct_containers": 1.5,
+        "workloads_affected": 38,
+        "pct_workloads": 1.6
+      },
+      "SEC_DANGEROUS_CAPABILITY": {
+        "findings": 29,
+        "pct_containers": 1.1,
+        "workloads_affected": 29,
+        "pct_workloads": 1.2
+      },
+      "SEC_NO_SECCOMP": {
+        "findings": 2191,
+        "pct_containers": 83.7,
+        "workloads_affected": 1877,
+        "pct_workloads": 77.9
+      },
+      "SEC_PRIVILEGED": {
+        "findings": 47,
+        "pct_containers": 1.8,
+        "workloads_affected": 45,
+        "pct_workloads": 1.9
+      },
+      "SEC_ROOT_NOT_PREVENTED": {
+        "findings": 2182,
+        "pct_containers": 83.3,
+        "workloads_affected": 1866,
+        "pct_workloads": 77.5
+      },
+      "SEC_RUN_AS_ROOT_EXPLICIT": {
+        "findings": 17,
+        "pct_containers": 0.6,
+        "workloads_affected": 16,
+        "pct_workloads": 0.7
+      }
+    }
+  }
+}

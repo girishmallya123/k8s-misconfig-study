@@ -1,0 +1,18 @@
+# Corpus is rebuilt by the collectors, not redistributed (mixed third-party licenses)
+corpus/
+
+# Local tool binaries and downloads
+bin/
+tools_dl/
+
+# Python environments and caches
+.venv-checkov/
+__pycache__/
+*.pyc
+
+# Large raw tool output (per-check counts are preserved in results/tool_coverage_matrix.md)
+results/tools/checkov_helm.json
+results/tools/*.err
+
+# Raw cloned sources (third-party; rebuilt by collectors)
+corpus_src/

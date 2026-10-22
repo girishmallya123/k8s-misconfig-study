@@ -1,0 +1,1429 @@
+[
+  {
+    "chart": "kube-prometheus-stack",
+    "repo": "prometheus-community",
+    "version": "92.11.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "cert-manager",
+    "repo": "cert-manager",
+    "version": "1.21.2",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "argo-cd",
+    "repo": "argo",
+    "version": "10.10.5",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "ingress-nginx",
+    "repo": "ingress-nginx",
+    "version": "4.15.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "prometheus",
+    "repo": "prometheus-community",
+    "version": "29.37.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "redis",
+    "repo": "bitnami",
+    "version": "28.3.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "traefik",
+    "repo": "traefik",
+    "version": "42.1.2",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "postgresql",
+    "repo": "bitnami",
+    "version": "18.12.14",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "kubernetes-dashboard",
+    "repo": "k8s-dashboard",
+    "version": "7.14.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "loki",
+    "repo": "grafana",
+    "version": "7.3.0",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "metrics-server",
+    "repo": "metrics-server",
+    "version": "3.14.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "vault",
+    "repo": "hashicorp",
+    "version": "0.34.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "gitlab",
+    "repo": "gitlab",
+    "version": "10.5.1",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "harbor",
+    "repo": "harbor",
+    "version": "1.19.4",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "keycloak",
+    "repo": "bitnami",
+    "version": "25.2.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "jenkins",
+    "repo": "jenkinsci",
+    "version": "5.9.72",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "external-secrets",
+    "repo": "external-secrets-operator",
+    "version": "2.13.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "external-dns",
+    "repo": "external-dns",
+    "version": "1.23.0",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "- policy: Invalid type. Expected: string, given: null"
+  },
+  {
+    "chart": "longhorn",
+    "repo": "longhorn",
+    "version": "1.13.0",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "rabbitmq",
+    "repo": "bitnami",
+    "version": "16.0.14",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "gitlab-runner",
+    "repo": "gitlab",
+    "version": "0.94.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "aws-load-balancer-controller",
+    "repo": "aws",
+    "version": "3.6.1",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "kafka",
+    "repo": "bitnami",
+    "version": "32.4.3",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "cilium",
+    "repo": "cilium",
+    "version": "1.21.0-pre.3",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "airflow",
+    "repo": "apache-airflow",
+    "version": "1.22.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "mysql",
+    "repo": "bitnami",
+    "version": "14.0.3",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "elasticsearch",
+    "repo": "elastic",
+    "version": "8.5.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "mongodb",
+    "repo": "bitnami",
+    "version": "20.0.5",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "velero",
+    "repo": "vmware-tanzu",
+    "version": "12.2.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "nextcloud",
+    "repo": "nextcloud",
+    "version": "9.4.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "minio",
+    "repo": "bitnami",
+    "version": "17.0.21",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "cluster-autoscaler",
+    "repo": "cluster-autoscaler",
+    "version": "9.59.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "metallb",
+    "repo": "metallb",
+    "version": "0.16.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "istiod",
+    "repo": "istio-official",
+    "version": "1.31.0-rc.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "rancher",
+    "repo": "rancher-stable",
+    "version": "2.15.2",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "kyverno",
+    "repo": "kyverno",
+    "version": "3.9.2",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "cloudnative-pg",
+    "repo": "cloudnative-pg",
+    "version": "0.29.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "argo-workflows",
+    "repo": "argo",
+    "version": "2.0.13",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "gitea",
+    "repo": "gitea",
+    "version": "12.7.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "sonarqube",
+    "repo": "sonarqube",
+    "version": "2026.5.1002",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "fluent-bit",
+    "repo": "fluent",
+    "version": "0.58.3",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "datadog",
+    "repo": "datadog",
+    "version": "3.259.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "oauth2-proxy",
+    "repo": "oauth2-proxy",
+    "version": "10.7.1",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "pgadmin4",
+    "repo": "runix",
+    "version": "1.70.4",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "nginx",
+    "repo": "bitnami",
+    "version": "25.2.8",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "wordpress",
+    "repo": "bitnami",
+    "version": "34.2.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "thanos",
+    "repo": "bitnami",
+    "version": "17.3.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "authentik",
+    "repo": "goauthentik",
+    "version": "2026.8.5",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "sealed-secrets",
+    "repo": "bitnami-labs",
+    "version": "2.18.6",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "nginx-ingress",
+    "repo": "nginx",
+    "version": "2.8.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "keda",
+    "repo": "kedacore",
+    "version": "2.21.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "argocd-apps",
+    "repo": "argo",
+    "version": "2.0.7",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "nfs-subdir-external-provisioner",
+    "repo": "nfs-subdir-external-provisioner",
+    "version": "4.0.18",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "artifact-hub",
+    "repo": "artifact-hub",
+    "version": "1.23.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "kube-state-metrics",
+    "repo": "prometheus-community",
+    "version": "8.6.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "pihole",
+    "repo": "mojo2600",
+    "version": "2.38.0",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "consul",
+    "repo": "hashicorp",
+    "version": "2.1.0-rc2",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "n8n",
+    "repo": "community-charts",
+    "version": "1.24.43",
+    "status": "already in corpus"
+  },
+  {
+    "chart": "mariadb",
+    "repo": "bitnami",
+    "version": "28.1.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "alloy",
+    "repo": "grafana",
+    "version": "1.14.1",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "base",
+    "repo": "istio-official",
+    "version": "1.31.0-rc.0",
+    "status": "ok",
+    "docs_approx": 18
+  },
+  {
+    "chart": "eck-operator",
+    "repo": "elastic",
+    "version": "3.5.0",
+    "status": "ok",
+    "docs_approx": 22
+  },
+  {
+    "chart": "prometheus-blackbox-exporter",
+    "repo": "prometheus-community",
+    "version": "11.20.1",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "reloader",
+    "repo": "stakater",
+    "version": "3.0.0-beta.3",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "argo-rollouts",
+    "repo": "argo",
+    "version": "2.43.8",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "kibana",
+    "repo": "elastic",
+    "version": "8.5.1",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "descheduler",
+    "repo": "descheduler",
+    "version": "0.37.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "jaeger",
+    "repo": "jaegertracing",
+    "version": "4.16.1",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "gateway",
+    "repo": "istio-official",
+    "version": "1.31.0-rc.0",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "jupyterhub",
+    "repo": "jupyterhub",
+    "version": "5.0.0-0.dev.git.7574.h2d52210e",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "mimir-distributed",
+    "repo": "grafana",
+    "version": "6.3.0-weekly.415",
+    "dep_retry": true,
+    "status": "render failed",
+    "stderr": "Use --debug flag to render out invalid YAML"
+  },
+  {
+    "chart": "headlamp",
+    "repo": "headlamp",
+    "version": "0.46.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "metabase",
+    "repo": "pmint93",
+    "version": "2.27.7",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "argocd-image-updater",
+    "repo": "argo",
+    "version": "1.3.2",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "nats",
+    "repo": "nats",
+    "version": "2.15.1",
+    "status": "ok",
+    "docs_approx": 8
+  },
+  {
+    "chart": "redis-cluster",
+    "repo": "bitnami",
+    "version": "13.0.4",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "dex",
+    "repo": "dex",
+    "version": "0.26.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "renovate",
+    "repo": "renovate",
+    "version": "46.376.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "uptime-kuma",
+    "repo": "uptime-kuma",
+    "version": "4.2.0",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "kubeview",
+    "repo": "kubeview",
+    "version": "2.2.1",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "falco",
+    "repo": "falcosecurity",
+    "version": "9.2.1",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "alertmanager",
+    "repo": "prometheus-community",
+    "version": "2.1.1",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "ollama",
+    "repo": "ollama-helm",
+    "version": "1.90.0",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "postgresql-ha",
+    "repo": "bitnami",
+    "version": "16.3.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "kong",
+    "repo": "kong",
+    "version": "3.4.1",
+    "status": "ok",
+    "docs_approx": 13
+  },
+  {
+    "chart": "nfs-server-provisioner",
+    "repo": "kvaps",
+    "version": "1.8.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "chartmuseum",
+    "repo": "chartmuseum",
+    "version": "3.10.4",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "forgejo",
+    "repo": "forgejo-helm",
+    "version": "17.3.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "opentelemetry-collector",
+    "repo": "opentelemetry-helm",
+    "version": "0.176.1",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "prometheus-node-exporter",
+    "repo": "prometheus-community",
+    "version": "4.60.0",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "redis-ha",
+    "repo": "dandydev-charts",
+    "version": "4.39.0",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "rook-ceph",
+    "repo": "rook",
+    "version": "1.21.0",
+    "status": "ok",
+    "docs_approx": 88
+  },
+  {
+    "chart": "grafana",
+    "repo": "grafana-community",
+    "version": "14.0.1",
+    "status": "ok",
+    "docs_approx": 10
+  },
+  {
+    "chart": "argo-events",
+    "repo": "argo",
+    "version": "2.4.27",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "crossplane",
+    "repo": "crossplane",
+    "version": "2.5.0-rc.0.171.g6dbabf1e1",
+    "status": "ok",
+    "docs_approx": 23
+  },
+  {
+    "chart": "spark",
+    "repo": "bitnami",
+    "version": "10.0.3",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "trivy-operator",
+    "repo": "trivy-operator",
+    "version": "0.37.0",
+    "status": "ok",
+    "docs_approx": 21
+  },
+  {
+    "chart": "docker-registry",
+    "repo": "twuni",
+    "version": "3.0.0",
+    "status": "download/extract failed: Remote end closed connection without response"
+  },
+  {
+    "chart": "logstash",
+    "repo": "elastic",
+    "version": "8.5.1",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "prometheus-postgres-exporter",
+    "repo": "prometheus-community",
+    "version": "8.2.0",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "victoria-metrics-k8s-stack",
+    "repo": "victoriametrics",
+    "version": "0.96.0",
+    "status": "ok",
+    "docs_approx": 60
+  },
+  {
+    "chart": "minecraft",
+    "repo": "minecraft-server-charts",
+    "version": "5.2.0",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "opensearch",
+    "repo": "opensearch-project-helm-charts",
+    "version": "3.9.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "k8s-monitoring",
+    "repo": "grafana",
+    "version": "4.5.3",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "kured",
+    "repo": "kured",
+    "version": "6.1.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "kafka-ui",
+    "repo": "kafka-ui",
+    "version": "1.6.5",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "aws-node-termination-handler",
+    "repo": "aws",
+    "version": "0.21.0",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "prometheus-adapter",
+    "repo": "prometheus-community",
+    "version": "5.3.0",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "home-assistant",
+    "repo": "helm-hass",
+    "version": "0.3.87",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "openebs",
+    "repo": "openebs",
+    "version": "4.7.0-develop",
+    "status": "ok",
+    "docs_approx": 107
+  },
+  {
+    "chart": "rabbitmq-cluster-operator",
+    "repo": "bitnami",
+    "version": "4.4.34",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "tigera-operator",
+    "repo": "projectcalico",
+    "version": "3.33.0",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "backstage",
+    "repo": "backstage",
+    "version": "2.10.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "etcd",
+    "repo": "bitnami",
+    "version": "12.0.18",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "keycloakx",
+    "repo": "codecentric",
+    "version": "7.4.0",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "open-webui",
+    "repo": "open-webui",
+    "version": "17.0.1-dev.560.1",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "goldilocks",
+    "repo": "fairwinds-stable",
+    "version": "11.2.0",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "actions-runner-controller",
+    "repo": "actions-runner-controller",
+    "version": "0.23.7",
+    "status": "ok",
+    "docs_approx": 19
+  },
+  {
+    "chart": "nginx-ingress-controller",
+    "repo": "bitnami",
+    "version": "12.0.7",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "aws-for-fluent-bit",
+    "repo": "aws",
+    "version": "0.2.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "kube-prometheus",
+    "repo": "bitnami",
+    "version": "11.3.10",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "immich",
+    "repo": "immich",
+    "version": "0.13.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "jira",
+    "repo": "atlassian-data-center",
+    "version": "2.0.17",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "prometheus-operator-crds",
+    "repo": "prometheus-community",
+    "version": "32.0.1",
+    "status": "ok",
+    "docs_approx": 20
+  },
+  {
+    "chart": "coredns",
+    "repo": "coredns",
+    "version": "1.49.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "mlflow",
+    "repo": "community-charts",
+    "version": "1.11.7",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "odoo",
+    "repo": "bitnami",
+    "version": "28.2.10",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "apisix",
+    "repo": "apisix",
+    "version": "2.18.2",
+    "status": "ok",
+    "docs_approx": 24
+  },
+  {
+    "chart": "strimzi-kafka-operator",
+    "repo": "strimzi-kafka-operator",
+    "version": "1.3.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "qdrant",
+    "repo": "qdrant",
+    "version": "1.19.2",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "vector",
+    "repo": "vector",
+    "version": "0.60.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "vpa",
+    "repo": "fairwinds-stable",
+    "version": "5.1.0",
+    "status": "ok",
+    "docs_approx": 42
+  },
+  {
+    "chart": "zookeeper",
+    "repo": "bitnami",
+    "version": "13.8.7",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "filebeat",
+    "repo": "elastic",
+    "version": "8.5.1",
+    "status": "ok",
+    "docs_approx": 8
+  },
+  {
+    "chart": "terraform",
+    "repo": "hashicorp",
+    "version": "1.1.2",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "x509-certificate-exporter",
+    "repo": "enix",
+    "version": "4.2.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "fluentd",
+    "repo": "bitnami",
+    "version": "7.2.5",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "influxdb",
+    "repo": "bitnami",
+    "version": "7.1.20",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "opentelemetry-operator",
+    "repo": "opentelemetry-helm",
+    "version": "0.126.1",
+    "status": "ok",
+    "docs_approx": 20
+  },
+  {
+    "chart": "kubernetes-event-exporter",
+    "repo": "bitnami",
+    "version": "3.6.3",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "trino",
+    "repo": "trino",
+    "version": "1.45.0",
+    "status": "ok",
+    "docs_approx": 10
+  },
+  {
+    "chart": "prometheus-pushgateway",
+    "repo": "prometheus-community",
+    "version": "3.9.1",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "clickhouse",
+    "repo": "bitnami",
+    "version": "9.4.4",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "ghost",
+    "repo": "bitnami",
+    "version": "25.0.4",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "matrix-synapse",
+    "repo": "ananace-charts",
+    "version": "3.12.40",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "dagster",
+    "repo": "dagster",
+    "version": "1.13.26",
+    "status": "ok",
+    "docs_approx": 23
+  },
+  {
+    "chart": "karpenter",
+    "repo": "aws-karpenter",
+    "version": "1.15.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "mailhog",
+    "repo": "codecentric",
+    "version": "5.8.0",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "mariadb-galera",
+    "repo": "bitnami",
+    "version": "16.0.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "phpmyadmin",
+    "repo": "bitnami",
+    "version": "20.0.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "prometheus-redis-exporter",
+    "repo": "prometheus-community",
+    "version": "6.34.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "zabbix",
+    "repo": "zabbix-community",
+    "version": "7.1.0",
+    "status": "ok",
+    "docs_approx": 15
+  },
+  {
+    "chart": "artifactory",
+    "repo": "jfrog",
+    "version": "107.161.26",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "rook-ceph-cluster",
+    "repo": "rook",
+    "version": "1.21.0",
+    "status": "ok",
+    "docs_approx": 27
+  },
+  {
+    "chart": "graylog",
+    "repo": "kong-z",
+    "version": "3.0.38",
+    "status": "ok",
+    "docs_approx": 23
+  },
+  {
+    "chart": "netdata",
+    "repo": "netdata",
+    "version": "3.7.176",
+    "status": "ok",
+    "docs_approx": 15
+  },
+  {
+    "chart": "nexus3",
+    "repo": "stevehipwell",
+    "version": "5.27.0",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "connect",
+    "repo": "onepassword-connect",
+    "version": "2.4.2",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "opencost",
+    "repo": "opencost",
+    "version": "2.5.33",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "zitadel",
+    "repo": "zitadel",
+    "version": "11.0.0-beta.11",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "node-problem-detector",
+    "repo": "deliveryhero",
+    "version": "2.4.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "prometheus-elasticsearch-exporter",
+    "repo": "prometheus-community",
+    "version": "7.4.0",
+    "status": "ok",
+    "docs_approx": 2
+  },
+  {
+    "chart": "openfaas",
+    "repo": "openfaas",
+    "version": "15.0.14",
+    "status": "ok",
+    "docs_approx": 26
+  },
+  {
+    "chart": "step-certificates",
+    "repo": "smallstep",
+    "version": "1.30.1",
+    "status": "ok",
+    "docs_approx": 19
+  },
+  {
+    "chart": "openmetadata",
+    "repo": "open-metadata",
+    "version": "2.0.6",
+    "status": "ok",
+    "docs_approx": 19
+  },
+  {
+    "chart": "policy-reporter",
+    "repo": "policy-reporter",
+    "version": "3.11.1",
+    "status": "ok",
+    "docs_approx": 8
+  },
+  {
+    "chart": "gitlab-agent",
+    "repo": "gitlab",
+    "version": "2.33.0",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "mail",
+    "repo": "docker-postfix",
+    "version": "5.1.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "valkey",
+    "repo": "valkey",
+    "version": "0.12.0",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "flux2",
+    "repo": "fluxcd-community",
+    "version": "2.19.1",
+    "status": "ok",
+    "docs_approx": 39
+  },
+  {
+    "chart": "vaultwarden",
+    "repo": "gissilabs",
+    "version": "1.4.2",
+    "status": "ok",
+    "docs_approx": 3
+  },
+  {
+    "chart": "drone",
+    "repo": "drone",
+    "version": "0.6.5",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "jaeger-operator",
+    "repo": "jaegertracing",
+    "version": "2.57.0",
+    "status": "ok",
+    "docs_approx": 10
+  },
+  {
+    "chart": "netbox",
+    "repo": "netbox",
+    "version": "8.3.93",
+    "status": "ok",
+    "docs_approx": 32
+  },
+  {
+    "chart": "cassandra",
+    "repo": "bitnami",
+    "version": "12.3.11",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "discourse",
+    "repo": "bitnami",
+    "version": "17.0.1",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "keydb",
+    "repo": "enapter",
+    "version": "0.48.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "vault-secrets-operator",
+    "repo": "hashicorp",
+    "version": "1.6.2",
+    "status": "ok",
+    "docs_approx": 33
+  },
+  {
+    "chart": "common",
+    "repo": "bitnami",
+    "version": "2.41.0",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "linkerd-viz",
+    "repo": "linkerd2",
+    "version": "30.12.11",
+    "status": "ok",
+    "docs_approx": 56
+  },
+  {
+    "chart": "memcached",
+    "repo": "bitnami",
+    "version": "8.8.4",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "postgres",
+    "repo": "cloudpirates-postgres",
+    "version": "0.21.2",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "rocketchat",
+    "repo": "rocketchat-server",
+    "version": "7.1.0",
+    "status": "ok",
+    "docs_approx": 29
+  },
+  {
+    "chart": "kyverno-policies",
+    "repo": "kyverno",
+    "version": "3.9.2",
+    "status": "ok",
+    "docs_approx": 11
+  },
+  {
+    "chart": "redpanda",
+    "repo": "redpanda-data",
+    "version": "26.2.4",
+    "status": "ok",
+    "docs_approx": 26
+  },
+  {
+    "chart": "trust-manager",
+    "repo": "cert-manager",
+    "version": "0.25.0",
+    "status": "ok",
+    "docs_approx": 15
+  },
+  {
+    "chart": "zammad",
+    "repo": "zammad",
+    "version": "20.0.0",
+    "status": "ok",
+    "docs_approx": 30
+  },
+  {
+    "chart": "gatekeeper",
+    "repo": "gatekeeper",
+    "version": "3.24.0-beta.0",
+    "status": "ok",
+    "docs_approx": 21
+  },
+  {
+    "chart": "openldap-stack-ha",
+    "repo": "helm-openldap",
+    "version": "4.3.3",
+    "status": "ok",
+    "docs_approx": 18
+  },
+  {
+    "chart": "snapshot-controller",
+    "repo": "piraeus-charts",
+    "version": "5.4.0",
+    "status": "ok",
+    "docs_approx": 14
+  },
+  {
+    "chart": "crowdsec",
+    "repo": "crowdsec",
+    "version": "0.24.2",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "linkerd-control-plane",
+    "repo": "linkerd2",
+    "version": "1.16.11",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "mongodb-sharded",
+    "repo": "bitnami",
+    "version": "9.4.12",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "victoria-metrics-cluster",
+    "repo": "victoriametrics",
+    "version": "0.53.0",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "podinfo",
+    "repo": "podinfo",
+    "version": "6.15.0",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "confluence",
+    "repo": "atlassian-data-center",
+    "version": "2.0.17",
+    "status": "ok",
+    "docs_approx": 7
+  },
+  {
+    "chart": "solr-operator",
+    "repo": "apache-solr",
+    "version": "0.9.1",
+    "status": "ok",
+    "docs_approx": 26
+  },
+  {
+    "chart": "contour",
+    "repo": "bitnami",
+    "version": "21.1.4",
+    "status": "download/extract failed: helm pull failed: Error: invalid_reference: invalid tag"
+  },
+  {
+    "chart": "k10",
+    "repo": "kasten",
+    "version": "9.0.8",
+    "status": "ok",
+    "docs_approx": 113
+  },
+  {
+    "chart": "mailu",
+    "repo": "mailu",
+    "version": "2.8.0",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "influxdb2",
+    "repo": "influxdata",
+    "version": "2.1.2",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "mariadb-operator",
+    "repo": "mariadb-operator",
+    "version": "26.10.1",
+    "status": "ok",
+    "docs_approx": 20
+  },
+  {
+    "chart": "ceph-csi-cephfs",
+    "repo": "ceph-csi",
+    "version": "3.18.1",
+    "status": "ok",
+    "docs_approx": 16
+  },
+  {
+    "chart": "ceph-csi-rbd",
+    "repo": "ceph-csi",
+    "version": "3.18.1",
+    "status": "ok",
+    "docs_approx": 16
+  },
+  {
+    "chart": "chaos-mesh",
+    "repo": "chaos-mesh",
+    "version": "2.8.6",
+    "status": "ok",
+    "docs_approx": 45
+  },
+  {
+    "chart": "clamav",
+    "repo": "wiremind",
+    "version": "3.7.3",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "csi-driver-nfs",
+    "repo": "csi-driver-nfs",
+    "version": "4.13.5",
+    "status": "ok",
+    "docs_approx": 9
+  },
+  {
+    "chart": "datahub",
+    "repo": "datahub",
+    "version": "1.1.7",
+    "status": "ok",
+    "docs_approx": 15
+  },
+  {
+    "chart": "linkerd-crds",
+    "repo": "linkerd2",
+    "version": "1.8.0",
+    "status": "ok",
+    "docs_approx": 8
+  },
+  {
+    "chart": "reflector",
+    "repo": "emberstack",
+    "version": "10.0.65",
+    "status": "ok",
+    "docs_approx": 4
+  },
+  {
+    "chart": "victoria-metrics-operator",
+    "repo": "victoriametrics",
+    "version": "0.68.1",
+    "status": "ok",
+    "docs_approx": 37
+  },
+  {
+    "chart": "portainer",
+    "repo": "portainer",
+    "version": "245.2.0",
+    "status": "ok",
+    "docs_approx": 6
+  },
+  {
+    "chart": "camunda-platform",
+    "repo": "camunda",
+    "version": "15.2.0",
+    "dep_retry": true,
+    "status": "render failed (dep retry budget exhausted)"
+  },
+  {
+    "chart": "coder",
+    "repo": "coder-v2",
+    "version": "2.38.1",
+    "status": "ok",
+    "docs_approx": 5
+  },
+  {
+    "chart": "nxrm-ha",
+    "repo": "sonatype",
+    "version": "97.1.0",
+    "status": "ok",
+    "docs_approx": 5
+  }
+]
