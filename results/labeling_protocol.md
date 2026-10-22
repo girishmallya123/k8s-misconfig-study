@@ -1,5 +1,12 @@
 # Labeling protocol — validation sample v2
 
+> **SUPERSEDED (2026-10-22).** This v2 protocol is retained for provenance;
+> the AI pre-labels were produced under it (see the addendum below). The
+> governing protocol is now `results/labeling_protocol_v3.md`. Note also
+> the correction in v3's reliability section: the 44/44 duplicate agreement
+> recorded in the addendum is intra-rater consistency, not inter-rater
+> reliability; the inter-rater measurement lives in `results/kappa_subset/`.
+
 **Purpose.** Estimate the rule engine's precision: are the things it flags actually
 misconfigurations? Reviewers will ask; this sample is the answer.
 

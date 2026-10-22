@@ -45,3 +45,10 @@
 - Taxonomy-v2 signals: SECRET_COMMITTED must require credential material (12% as defined); SEC_CAPABILITY_ADDED must exclude least-privilege patterns (24%); host-namespace rules + SEC_PRIVILEGED need the infra-agent class; SECRET_LITERAL_ENV must exclude *_FILE/_NAME references and policy settings (40%).
 - Extraction caveat found: duplicate-named ClusterRoles in Argo CD bundles (4 rows hand-verified).
 - NEXT: Girish's verification pass on the pre-labeled CSV → final per-rule precision → taxonomy v2.
+
+## 2026-10-22 — Methods audit: protocol harmonization + reliability fix
+
+- An external review flagged, and I verified against the repo: (1) two conflicting labeling protocols existed — root labeling-protocol.md (v1, exploitability standard) vs results/labeling_protocol.md (v2, definitional; pre-labels follow v2). (2) The 44/44 blind-duplicate agreement is intra-rater consistency, not inter-rater reliability; the v1 design called for a second labeler on a 30-row overlap for Cohen's kappa.
+- Fix kit built (scripts/build_fix_kit.py): results/labeling_protocol_v3.md is now the single governing protocol (v2 core + v1 amendments: IMG_NO_DIGEST two-tier, RES/REL production-scoping, APE/ROOT escalation-path test, DEPRECATED_API as rot tier; SECRET/CAPABILITY/infra refinements carried). v1 and v2 files banner-marked superseded, retained for provenance.
+- Divergence list (results/divergence_list.csv): 92 of 457 rows are standard-sensitive — A: 14 IMG_NO_DIGEST (re-tier as TP-hardening), B: 42 RES/REL TPs from example/fixture sources (FP under v3), C: 29 APE/ROOT TPs needing escalation-path verification (none auto-flip on packet evidence), D: 7 evidence-absent unsure rows (kustomize-injected images K8S-113/207/236/371 + unlocatable K8S-189; excluded from precision denominators, disclosed).
+- Blinded kappa subset built (results/kappa_subset/): 30 unique-content rows across all 25 rules + packets + instructions; scripts/score_kappa.py computes author-vs-AI Cohen's kappa (smoke-tested). NEXT: Girish labels the blind subset cold (~30-60 min), then the verification pass (divergence rows first).

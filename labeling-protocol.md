@@ -1,5 +1,11 @@
 # Labeling protocol — K8s misconfiguration study validation sample
 
+> **SUPERSEDED (2026-10-22).** This v1 protocol is retained for provenance.
+> The governing protocol is `results/labeling_protocol_v3.md`, which merges
+> this protocol's per-rule refinements into the v2 definitional standard.
+> See v3's header for why, and `results/divergence_list.csv` for the rows
+> where the standards disagree.
+
 **Sample:** `labeling_sample_pilot_v1.csv` — 302 findings (all high-severity/rare findings +
 stratified slice of common rules), each linked to its source file.
 Fill `label_TP_FP_unsure` (TP / FP / UNSURE) and `reviewer_notes` per row.
