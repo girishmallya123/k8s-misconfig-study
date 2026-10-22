@@ -1,7 +1,7 @@
 # Lab notebook
 
 ## 2026-10-21 — Project start
-- Project conceived as an independent (non-affiliated) empirical study for the NIW evidence portfolio. Research questions and full plan written (see goal workspace plan doc).
+- Project conceived as an independent (non-affiliated) empirical study of how Kubernetes workloads are actually configured in the open — whether the manifests people ship match the hardening guidance the ecosystem publishes. Research questions and full plan written (see study plan).
 - Scaffolded repo; installed Helm v3.16.3 locally for chart rendering.
 - Pilot goal: collect a first corpus (top Helm charts rendered with default values + raw manifests from public GitHub repos), run the taxonomy rule engine end-to-end, and sanity-check prevalence numbers before scaling.
 - Taxonomy v1 seeded from the CIS Kubernetes Benchmark and NSA/CISA Kubernetes Hardening Guidance categories: security context, resource hygiene, image hygiene, RBAC, host namespaces, secrets handling, probes, deprecated APIs.
